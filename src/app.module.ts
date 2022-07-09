@@ -14,6 +14,7 @@ import { RolesModule } from './roles/roles.module';
     AuthModule,
     UsersModule,
     RolesModule,
+    
   ],
   controllers: [AppController],
   providers: [AppService],
