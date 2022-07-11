@@ -52,7 +52,7 @@ $ npm run start:prod
 # add seeders
 $ npm run seed
 
-# watch mode
+# refresh seeders
 $ npm run seed:refresh
 ```
 
