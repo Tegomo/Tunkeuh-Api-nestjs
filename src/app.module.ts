@@ -6,6 +6,8 @@ import { IssuesModule } from './issues/issues.module';
 import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
 import { RolesModule } from './roles/roles.module';
+import { ServicesModule } from './services/services.module';
+import { VehiclesCategoriesModule } from './vehicles_categories/vehicles_categories.module';
 
 @Module({
   imports: [
@@ -14,6 +16,8 @@ import { RolesModule } from './roles/roles.module';
     AuthModule,
     UsersModule,
     RolesModule,
+    ServicesModule,
+    VehiclesCategoriesModule,
     
   ],
   controllers: [AppController],

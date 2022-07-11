@@ -2,14 +2,18 @@ import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
 import { Factory } from "nestjs-seeder";
 
-export type RoleDocument = Role & Document;
+export type ServiceDocument = Service & Document;
 
 @Schema()
-export class Role {
+export class Service {
   
-  @Factory(faker => faker.random.arrayElement(["Admin", "chauffeur", "Client", "Entreprise", "Gestionnaire"]))
+  @Factory(faker => faker.random.arrayElement(["Ride", "Food", "package"]))
   @Prop()
   name: string;
+
+  @Factory(faker => faker.image.cats())
+  @Prop()
+  image: string;
 
   @Prop({ required: true, default: true })
   published!: boolean;
@@ -22,4 +26,4 @@ export class Role {
 
 }
 
-export const RoleSchema = SchemaFactory.createForClass(Role);
+export const ServiceSchema = SchemaFactory.createForClass(Service);
