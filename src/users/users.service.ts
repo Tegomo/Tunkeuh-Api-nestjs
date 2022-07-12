@@ -8,6 +8,7 @@ import { JwtService } from '@nestjs/jwt';
 import { InjectModel } from '@nestjs/mongoose';
 import * as bcrypt from 'bcrypt';
 import { Model } from 'mongoose';
+import { PaginationQueryDto } from 'src/pagination-query.dto';
 import { Role } from 'src/roles/role.schema';
 import { AuthCredentialsDto } from './dto/auth-credentials.dto';
 import { CreateUserDto } from './dto/create-user.dto';
@@ -90,11 +91,14 @@ export class UsersService {
     return { message: 'Account successfully deleted' };
   }
 
-  async findUsers() {
-    const users = await this.userModel.find()
+  async findUsers(paginationQuery: PaginationQueryDto): Promise<UserDocument[]> {
+    const { limit, offset } = paginationQuery;
+  
+    return await this.userModel.find()
     .populate('role', null, Role.name)
+    .skip(offset)
+    .limit(limit)
     .exec();
-    return { users };
   }
 
 }

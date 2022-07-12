@@ -8,11 +8,44 @@ export type UserDocument = User & Document;
 @Schema()
 export class User {
 
-  @Prop()
+  @Prop({ required: true })
+  name: string;
+
+  @Prop({ required: true })
   email: string;
 
-  @Prop()
+  @Prop({ required: true })
   password: string;
+
+  @Prop({ required: true })
+  phone: string;
+
+  @Prop({ required: false, default: null })
+  profile_url: string;
+
+  @Prop({ required: false, default: null })
+  driver_licence_number: string;
+
+  @Prop({ required: false, default: null })
+  driver_licence_front: string;
+
+  @Prop({ required: false, default: null })
+  driver_licence_back: string;
+
+  @Prop({ required: false, default: null })
+  card_id_number: string;
+
+  @Prop({ required: false, default: null })
+  card_id_front: string;
+
+  @Prop({ required: false, default: null })
+  card_id_back: string;
+
+  @Prop({ required: true, default: false })
+  isActive: boolean;
+
+  @Prop({ required: true, default: false })
+  isSuperAdmin: boolean;
 
   @Prop({ type: mongoose.Schema.Types.ObjectId, role: Role.name })
   @Type(() => Role)
@@ -26,7 +59,6 @@ export class User {
 
   @Prop({ default: Date.now })
   updatedAt!: Date;
-
 
 }
 
