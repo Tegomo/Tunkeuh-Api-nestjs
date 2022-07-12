@@ -9,6 +9,7 @@ import { RolesModule } from './roles/roles.module';
 import { ServicesModule } from './services/services.module';
 import { VehiclesCategoriesModule } from './vehicles_categories/vehicles_categories.module';
 import { AdressesModule } from './adresses/adresses.module';
+import { PaiementMethodsModule } from './paiement_methods/paiement_methods.module';
 
 @Module({
   imports: [
@@ -20,6 +21,7 @@ import { AdressesModule } from './adresses/adresses.module';
     ServicesModule,
     VehiclesCategoriesModule,
     AdressesModule,
+    PaiementMethodsModule,
     
   ],
   controllers: [AppController],

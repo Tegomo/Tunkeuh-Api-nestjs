@@ -6,6 +6,8 @@ import { ServicesSeeder } from "./services/services.seeder";
 import { Service, ServiceSchema } from "./services/service.schema";
 import { VehicleCategory, VehicleCategorySchema } from "./vehicles_categories/vehicles_category.schema";
 import { VehicleCategoriesSeeder } from "./vehicles_categories/vehicles_categories.seeder";
+import { PaiementMethodsSeeder } from "./paiement_methods/paiement_methods.seeder";
+import { PaiementMethod, PaiementMethodSchema } from "./paiement_methods/paiement_method.schema";
 
 seeder({
   imports: [
@@ -13,7 +15,8 @@ seeder({
     MongooseModule.forFeature([
       { name: Role.name, schema: RoleSchema },
       { name: Service.name, schema: ServiceSchema },
-      { name: VehicleCategory.name, schema: VehicleCategorySchema }
+      { name: VehicleCategory.name, schema: VehicleCategorySchema },
+      { name: PaiementMethod.name, schema: PaiementMethodSchema }
     ]),
   ],
-}).run([RolesSeeder, ServicesSeeder, VehicleCategoriesSeeder]);
+}).run([RolesSeeder, ServicesSeeder, VehicleCategoriesSeeder,PaiementMethodsSeeder]);

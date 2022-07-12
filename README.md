@@ -32,6 +32,7 @@
 $ npm install
 ```
 
+
 ## Running the app
 
 ```bash
@@ -44,6 +45,17 @@ $ npm run start:dev
 # production mode
 $ npm run start:prod
 ```
+
+## Add seeders
+
+```bash
+# add seeders
+$ npm run seed
+
+# refresh seeders
+$ npm run seed:refresh
+```
+
 
 ## Test
 
