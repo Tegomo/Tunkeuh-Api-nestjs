@@ -12,11 +12,26 @@ export class RolesSeeder implements Seeder {
     // Generate roles.
     //const roles = DataFactory.createForClass(Role).generate(10);
     const roles = [
-        { name: "Admin" },
-        { name: "chauffeur" },
-        { name: "Client" },
-        { name: "Entreprise" },
-        { name: "Gestionnaire" },
+        { 
+          _id: "62ca9ec9738ee38481256dda",
+          name: "Admin" 
+        },
+        { 
+          _id: "62ca9ec9738ee38481256ddb",
+          name: "chauffeur"
+         },
+        {
+          _id: "62ca9ec9738ee38481256ddc",
+           name: "Client" 
+        },
+        { 
+          _id: "62ca9ec9738ee38481256ddd",
+          name: "Entreprise"
+         },
+        { 
+          _id: "62ca9ec9738ee38481256dde",
+          name: "Gestionnaire" 
+        },
     ];
 
     // Insert into the database.

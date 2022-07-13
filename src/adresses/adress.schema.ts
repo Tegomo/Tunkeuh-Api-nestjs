@@ -6,17 +6,23 @@ export type AdressDocument = Adress & Document;
 @Schema()
 export class Adress {
   
-  @Prop()
+  @Prop({ required: false, default: null })
+  name: string;
+
+  @Prop({ required: false, default: null })
   country: string;
 
-  @Prop()
+  @Prop({ required: false, default: null })
   state: string;
 
-  @Prop()
+  @Prop({ required: false, default: null })
   city: string;
 
-  @Prop()
+  @Prop({ required: false, default: null })
   street: string;
+
+  @Prop({ required: true, index: '2dsphere' })
+  coordinates: number[];
 
   @Prop({ required: true, default: true })
   published!: boolean;

@@ -1,6 +1,8 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Type } from 'class-transformer';
 import mongoose, { Document } from 'mongoose';
+import { Factory } from 'nestjs-seeder';
+import { Adress } from 'src/adresses/adress.schema';
 import { Role } from 'src/roles/role.schema';
 
 export type UserDocument = User & Document;
@@ -8,18 +10,22 @@ export type UserDocument = User & Document;
 @Schema()
 export class User {
 
+  @Factory(faker => faker.name.firstName()) 
   @Prop({ required: true })
   name: string;
 
+  @Factory(faker => faker.internet.email())
   @Prop({ required: true })
   email: string;
 
   @Prop({ required: true })
   password: string;
 
+  @Factory(faker => faker.name.phone())
   @Prop({ required: true })
   phone: string;
 
+  @Factory(faker => faker.image.avatar())
   @Prop({ required: false, default: null })
   profile_url: string;
 
@@ -50,6 +56,18 @@ export class User {
   @Prop({ type: mongoose.Schema.Types.ObjectId, role: Role.name })
   @Type(() => Role)
   role: Role;
+
+  @Prop({ type: mongoose.Schema.Types.ObjectId, entreprise: User.name, required: false, default: null })
+  @Type(() => User)
+  entreprise: User;
+
+  @Prop([{ type: mongoose.Schema.Types.ObjectId, staff: User.name, required: false, default: null }])
+  @Type(() => User)
+  staff: User;
+
+  @Prop([{ type: mongoose.Schema.Types.ObjectId, adress: Adress.name, required: false, default: null }])
+  @Type(() => Adress)
+  adresses: Adress;
 
   @Prop({ required: true, default: true })
   published!: boolean;

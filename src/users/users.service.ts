@@ -91,14 +91,12 @@ export class UsersService {
     return { message: 'Account successfully deleted' };
   }
 
-  async findUsers(paginationQuery: PaginationQueryDto): Promise<UserDocument[]> {
-    const { limit, offset } = paginationQuery;
-  
-    return await this.userModel.find()
+  async findUsers() {
+    const users = await this.userModel.find()
     .populate('role', null, Role.name)
-    .skip(offset)
-    .limit(limit)
     .exec();
+
+    return {users};
   }
 
 }

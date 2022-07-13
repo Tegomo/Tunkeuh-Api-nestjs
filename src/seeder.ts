@@ -8,6 +8,10 @@ import { VehicleCategory, VehicleCategorySchema } from "./vehicles_categories/ve
 import { VehicleCategoriesSeeder } from "./vehicles_categories/vehicles_categories.seeder";
 import { PaiementMethodsSeeder } from "./paiement_methods/paiement_methods.seeder";
 import { PaiementMethod, PaiementMethodSchema } from "./paiement_methods/paiement_method.schema";
+import { AdressesSeeder } from "./adresses/adress.seeder";
+import { Adress, AdressSchema } from "./adresses/adress.schema";
+import { User, UserSchema } from "./users/user.schema";
+import { UsersSeeder } from "./users/users.seeder";
 
 seeder({
   imports: [
@@ -16,7 +20,9 @@ seeder({
       { name: Role.name, schema: RoleSchema },
       { name: Service.name, schema: ServiceSchema },
       { name: VehicleCategory.name, schema: VehicleCategorySchema },
-      { name: PaiementMethod.name, schema: PaiementMethodSchema }
+      { name: PaiementMethod.name, schema: PaiementMethodSchema },
+      { name: User.name, schema: UserSchema },
+      { name: Adress.name, schema: AdressSchema }
     ]),
   ],
-}).run([RolesSeeder, ServicesSeeder, VehicleCategoriesSeeder,PaiementMethodsSeeder]);
+}).run([RolesSeeder, ServicesSeeder, VehicleCategoriesSeeder,PaiementMethodsSeeder, AdressesSeeder, UsersSeeder]);
