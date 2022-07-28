@@ -35,8 +35,8 @@ export class UsersController {
     return this.usersService.signIn(authCredentialsDto);
   }
 
-  @Get()
   @UseGuards(AuthGuard('jwt'))
+  @Get('profile')
   getProfile(@CurrentUser() user: UserDocument) {
     return this.usersService.getProfile(user);
   }

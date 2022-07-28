@@ -47,6 +47,7 @@ export class UsersService {
     return {
       message: 'user is signed up',
       token: token,
+      user: user,
     };
   }
 
@@ -73,6 +74,7 @@ export class UsersService {
     return {
       message: 'user is signed in',
       token: token,
+      user: userFoundByEmail,
     };
   }
 
