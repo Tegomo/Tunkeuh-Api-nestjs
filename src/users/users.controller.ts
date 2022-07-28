@@ -20,6 +20,7 @@ import { UsersService } from './users.service';
 export class UsersController {
   constructor(private usersService: UsersService) {}
 
+  // users
   @Get()
   findUsers() {
     return this.usersService.findUsers();
@@ -46,4 +47,12 @@ export class UsersController {
   deleteAccount(@CurrentUser() user: UserDocument) {
     return this.usersService.deleteAccount(user);
   }
+
+  // entreprises
+  @Get('entreprises')
+  findEntreprises() {
+    return this.usersService.findEntreprises();
+  }
+
+
 }

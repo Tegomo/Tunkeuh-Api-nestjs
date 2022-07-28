@@ -16,7 +16,7 @@ import { User, UserDocument } from './user.schema';
 
 @Injectable()
 export class UsersService {
-  
+
   constructor(
     @InjectModel(User.name) private userModel: Model<UserDocument>,
     private jwcService: JwtService,
@@ -101,4 +101,10 @@ export class UsersService {
     return {users};
   }
 
+  // entreprises
+
+  findEntreprises() {
+    return this.userModel.find({ role: 'Entreprise' }).exec();
+  }
+  
 }
