@@ -103,8 +103,13 @@ export class UsersService {
 
   // entreprises
 
-  findEntreprises() {
-    return this.userModel.find({ role: 'Entreprise' }).exec();
+  async findEntreprises() {
+    const entreprises = await this.userModel
+    .find()
+    .populate('role', null, Role.name)
+    .populate('entreprise', null, User.name)
+    .exec();
+    return {entreprises}; 
   }
   
 }
