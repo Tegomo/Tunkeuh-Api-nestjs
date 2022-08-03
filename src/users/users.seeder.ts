@@ -13,6 +13,7 @@ export class UsersSeeder implements Seeder {
     const users = [
         { 
           _id: "62ca9ec9738ee38481256dda",
+          profile_url: "https://i.pravatar.cc/300",
           name: "Admin",
           email: "tegomovarmand@gmail.com",
           password: "123456",
@@ -25,6 +26,7 @@ export class UsersSeeder implements Seeder {
         { 
           _id: "62ca9ec9738ee38481256ddc",
           name: "Client",
+          profile_url: "https://i.pravatar.cc/300",
           email: "client@gmail.com",
           password: "123456",
           phone: "6868686868",
@@ -33,8 +35,11 @@ export class UsersSeeder implements Seeder {
           role: "62ca9ec9738ee38481256ddc",
           staff: null
         }, 
+
+
         { 
           _id: "62ca9ec9738ee38481256ddd",
+          profile_url: "https://i.pravatar.cc/300",
           name: "Entreprise 1",
           email: "entreprise@gmail.com",
           password: "123456",
@@ -43,9 +48,49 @@ export class UsersSeeder implements Seeder {
           isSuperAdmin: false,
           role: "62ca9ec9738ee38481256ddd",
           staff: ["62ca9ec9738ee38481256ddb", "62ca9ec9738ee38481256dde"]
+        }, 
+        { 
+          _id: "62ca9ec9738ee38481256ddg",
+          profile_url: "https://i.pravatar.cc/300",
+          name: "Entreprise 2",
+          email: "entreprise2@gmail.com",
+          password: "123456",
+          phone: "6868686868",
+          isActive: true,
+          isSuperAdmin: false,
+          role: "62ca9ec9738ee38481256ddd",
+          staff: []
         },
         { 
+          _id: "62ca9ec9738ee38481256ddh",
+          profile_url: "https://i.pravatar.cc/300",
+          name: "Entreprise 3",
+          email: "entreprise3@gmail.com",
+          password: "123456",
+          phone: "6868686868",
+          isActive: true,
+          isSuperAdmin: false,
+          role: "62ca9ec9738ee38481256ddd",
+          staff: []
+        },
+        { 
+          _id: "62ca9ec9738ee38481256ddh",
+          profile_url: "https://i.pravatar.cc/300",
+          name: "Entreprise 4",
+          email: "entreprise4@gmail.com",
+          password: "123456",
+          phone: "6868686868",
+          isActive: true,
+          isSuperAdmin: false,
+          role: "62ca9ec9738ee38481256ddd",
+          staff: []
+        },
+
+
+
+        { 
           _id: "62ca9ec9738ee38481256ddb",
+          profile_url: "https://i.pravatar.cc/300",
           name: "Chauffeur",
           email: "chauffeur@gmail.com",
           password: "123456",
@@ -58,6 +103,7 @@ export class UsersSeeder implements Seeder {
         },
         { 
           _id: "62ca9ec9738ee38481256dde",
+          profile_url: "https://i.pravatar.cc/300",
           name: "Gestionnaire",
           email: "gestionnaire@gmail.com",
           password: "123456",
