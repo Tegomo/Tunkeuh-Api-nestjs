@@ -104,11 +104,10 @@ export class UsersService {
   // entreprises
 
   async findEntreprises() {
-    const entreprises = await this.userModel.find()
-    .populate('entreprise', null, User.name)
+    const entreprises = await this.userModel.find({ role: '62ca9ec9738ee38481256ddd' })
     .populate('role'  , null, Role.name)
-    .where('isActive').equals(true)
-    .where('name').in('role').equals('Entreprise');
+    .where('isActive').equals(true);
+    //.where('role.name').in(role).equals('Entreprise');
 
     return {entreprises};
   }
