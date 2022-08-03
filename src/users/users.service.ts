@@ -95,16 +95,22 @@ export class UsersService {
 
   async findUsers() {
     const users = await this.userModel.find()
-    .populate('role', null, Role.name)
-    .exec();
+    .populate('role'  , null, Role.name)
+    .populate('entreprise', null, User.name);
 
     return {users};
   }
 
   // entreprises
 
-  findEntreprises() {
-    return this.userModel.find({ role: 'Entreprise' }).exec();
+  async findEntreprises() {
+    const entreprises = await this.userModel.find()
+    .populate('entreprise', null, User.name)
+    .populate('role'  , null, Role.name)
+    .where('isActive').equals(true)
+    .where('name').in('role').equals('Entreprise');
+
+    return {entreprises};
   }
   
 }
