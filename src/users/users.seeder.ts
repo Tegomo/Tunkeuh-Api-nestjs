@@ -47,10 +47,11 @@ export class UsersSeeder implements Seeder {
           isActive: true,
           isSuperAdmin: false,
           role: "62ca9ec9738ee38481256ddd",
+          adresses: ["62ca9ec9738ee38481256dda", "62ca9ec9738ee38481256ddb"],
           staff: ["62ca9ec9738ee38481256ddb", "62ca9ec9738ee38481256dde"]
         }, 
         { 
-          _id: "62ca9ec9738ee38481256ddg",
+          _id: "62ca9ec9738ee38481256ddf",
           profile_url: "https://i.pravatar.cc/300",
           name: "Entreprise 2",
           email: "entreprise2@gmail.com",
@@ -58,36 +59,11 @@ export class UsersSeeder implements Seeder {
           phone: "6868686868",
           isActive: true,
           isSuperAdmin: false,
+          adresses: ["62ca9ec9738ee38481256ddc", "62ca9ec9738ee38481256ddd"],
           role: "62ca9ec9738ee38481256ddd",
-          staff: []
+          staff: null
         },
-        { 
-          _id: "62ca9ec9738ee38481256ddh",
-          profile_url: "https://i.pravatar.cc/300",
-          name: "Entreprise 3",
-          email: "entreprise3@gmail.com",
-          password: "123456",
-          phone: "6868686868",
-          isActive: true,
-          isSuperAdmin: false,
-          role: "62ca9ec9738ee38481256ddd",
-          staff: []
-        },
-        { 
-          _id: "62ca9ec9738ee38481256ddh",
-          profile_url: "https://i.pravatar.cc/300",
-          name: "Entreprise 4",
-          email: "entreprise4@gmail.com",
-          password: "123456",
-          phone: "6868686868",
-          isActive: true,
-          isSuperAdmin: false,
-          role: "62ca9ec9738ee38481256ddd",
-          staff: []
-        },
-
-
-
+        
         { 
           _id: "62ca9ec9738ee38481256ddb",
           profile_url: "https://i.pravatar.cc/300",
