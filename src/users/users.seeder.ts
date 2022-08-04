@@ -35,8 +35,6 @@ export class UsersSeeder implements Seeder {
           role: "62ca9ec9738ee38481256ddc",
           staff: null
         }, 
-
-
         { 
           _id: "62ca9ec9738ee38481256ddd",
           profile_url: "https://i.pravatar.cc/300",
@@ -63,8 +61,6 @@ export class UsersSeeder implements Seeder {
           role: "62ca9ec9738ee38481256ddd",
           staff: []
         },
-
-
         { 
           _id: "62ca9ec9738ee38481256ddb",
           profile_url: "https://i.pravatar.cc/300",
