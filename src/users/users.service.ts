@@ -8,6 +8,7 @@ import { JwtService } from '@nestjs/jwt';
 import { InjectModel } from '@nestjs/mongoose';
 import * as bcrypt from 'bcrypt';
 import { Model } from 'mongoose';
+import { Adress } from 'src/adresses/adress.schema';
 import { PaginationQueryDto } from 'src/pagination-query.dto';
 import { Role } from 'src/roles/role.schema';
 import { AuthCredentialsDto } from './dto/auth-credentials.dto';
@@ -107,6 +108,8 @@ export class UsersService {
     const entreprises = await this.userModel
     .find({ role: '62ca9ec9738ee38481256ddd' })
     .populate('role'  , null, Role.name)
+    .populate('adresses'  , null, Adress.name)
+    .populate('staff'  , null, User.name)
     .where('isActive').equals(true);
 
     return {entreprises};

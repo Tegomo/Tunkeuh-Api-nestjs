@@ -16,7 +16,7 @@ export class UsersSeeder implements Seeder {
           profile_url: "https://i.pravatar.cc/300",
           name: "Admin",
           email: "tegomovarmand@gmail.com",
-          password: "123456",
+          password: "12345678",
           phone: "6868686868",
           isActive: true,
           isSuperAdmin: true,
@@ -28,26 +28,24 @@ export class UsersSeeder implements Seeder {
           name: "Client",
           profile_url: "https://i.pravatar.cc/300",
           email: "client@gmail.com",
-          password: "123456",
+          password: "12345678",
           phone: "6868686868",
           isActive: true,
           isSuperAdmin: false,
           role: "62ca9ec9738ee38481256ddc",
           staff: null
         }, 
-
-
         { 
           _id: "62ca9ec9738ee38481256ddd",
           profile_url: "https://i.pravatar.cc/300",
           name: "Entreprise 1",
           email: "entreprise@gmail.com",
-          password: "123456",
+          password: "12345678",
           phone: "6868686868",
           isActive: true,
           isSuperAdmin: false,
+          adresses:["62ca9ec9738ee38481256dda", "62ca9ec9738ee38481256ddb"],
           role: "62ca9ec9738ee38481256ddd",
-          adresses: ["62ca9ec9738ee38481256dda", "62ca9ec9738ee38481256ddb"],
           staff: ["62ca9ec9738ee38481256ddb", "62ca9ec9738ee38481256dde"]
         }, 
         { 
@@ -55,21 +53,20 @@ export class UsersSeeder implements Seeder {
           profile_url: "https://i.pravatar.cc/300",
           name: "Entreprise 2",
           email: "entreprise2@gmail.com",
-          password: "123456",
+          password: "12345678",
           phone: "6868686868",
           isActive: true,
           isSuperAdmin: false,
-          adresses: ["62ca9ec9738ee38481256ddc", "62ca9ec9738ee38481256ddd"],
+          adresses:["62ca9ec9738ee38481256ddc", "62ca9ec9738ee38481256ddd"],
           role: "62ca9ec9738ee38481256ddd",
-          staff: null
+          staff: []
         },
-        
         { 
           _id: "62ca9ec9738ee38481256ddb",
           profile_url: "https://i.pravatar.cc/300",
           name: "Chauffeur",
           email: "chauffeur@gmail.com",
-          password: "123456",
+          password: "12345678",
           phone: "6868686868",
           isActive: true,
           isSuperAdmin: false,
@@ -82,7 +79,7 @@ export class UsersSeeder implements Seeder {
           profile_url: "https://i.pravatar.cc/300",
           name: "Gestionnaire",
           email: "gestionnaire@gmail.com",
-          password: "123456",
+          password: "12345678",
           phone: "6868686868",
           isActive: true,
           isSuperAdmin: false,
