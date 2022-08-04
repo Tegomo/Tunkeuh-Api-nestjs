@@ -19,7 +19,7 @@ export class AdressesSeeder implements Seeder {
           city: "Douala",
           country: "Cameroun",
           state: "Douala",
-          coordinates: [4.063963, 9.716409]
+          coordinates: [9.716409, 4.063963]
         }, 
         { 
           _id: "62ca9ec9738ee38481256ddb",
@@ -29,7 +29,7 @@ export class AdressesSeeder implements Seeder {
           city: "Douala",
           country: "Cameroun",
           state: "Douala",
-          coordinates: [4.063541, 9.740815]
+          coordinates: [9.740815, 4.063541,]
         },  
 
         { 
@@ -40,7 +40,7 @@ export class AdressesSeeder implements Seeder {
           city: "Douala",
           country: "Cameroun",
           state: "Douala",
-          coordinates: [4.077007, 9.769924]
+          coordinates: [9.769924, 4.077007]
         }, 
         { 
           _id: "62ca9ec9738ee38481256ddd",
@@ -50,7 +50,7 @@ export class AdressesSeeder implements Seeder {
           city: "Douala",
           country: "Cameroun",
           state: "Douala",
-          coordinates: [4.094447, 9.739441]
+          coordinates: [9.739441, 4.094447]
         }, 
     ];
 
