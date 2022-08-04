@@ -14,12 +14,12 @@ export class AdressesSeeder implements Seeder {
         { 
           _id: "62ca9ec9738ee38481256dda",
           name: "Maison",
-          street: "Bépanda",
+          street: "déido",
           zipCode: "75000",
           city: "Douala",
           country: "Cameroun",
           state: "Douala",
-          coordinates: [9.722446952142093, 4.057694946125622]
+          coordinates: [4.063963, 9.716409]
         }, 
         { 
           _id: "62ca9ec9738ee38481256ddb",
@@ -29,8 +29,29 @@ export class AdressesSeeder implements Seeder {
           city: "Douala",
           country: "Cameroun",
           state: "Douala",
-          coordinates: [9.741590944335599, 4.064707330135306]
+          coordinates: [4.063541, 9.740815]
         },  
+
+        { 
+          _id: "62ca9ec9738ee38481256ddc",
+          name: "Maison",
+          street: "Logpom",
+          zipCode: "75000",
+          city: "Douala",
+          country: "Cameroun",
+          state: "Douala",
+          coordinates: [4.077007, 9.769924]
+        }, 
+        { 
+          _id: "62ca9ec9738ee38481256ddd",
+          name: "Bonamoussadi",
+          street: "Makepe",
+          zipCode: "7700",
+          city: "Douala",
+          country: "Cameroun",
+          state: "Douala",
+          coordinates: [4.094447, 9.739441]
+        }, 
     ];
 
     // Insert into the database.

@@ -4,7 +4,6 @@ import mongoose, { Document } from 'mongoose';
 import { Factory } from 'nestjs-seeder';
 import { Adress } from 'src/adresses/adress.schema';
 import { Role } from 'src/roles/role.schema';
-import { ManyToOne } from 'typeorm';
 
 export type UserDocument = User & Document;
 
