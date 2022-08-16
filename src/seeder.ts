@@ -15,7 +15,7 @@ import { UsersSeeder } from "./users/users.seeder";
 
 seeder({
   imports: [
-    MongooseModule.forRoot("mongodb://localhost/issue-tracker"),
+    MongooseModule.forRoot("mongodb+srv://dbUser:dbUser@cluster0.24fpq3x.mongodb.net/?retryWrites=true&w=majority"),
     MongooseModule.forFeature([
       { name: Role.name, schema: RoleSchema },
       { name: Service.name, schema: ServiceSchema },

@@ -13,7 +13,7 @@ import { PaiementMethodsModule } from './paiement_methods/paiement_methods.modul
 
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb://localhost/issue-tracker'),
+    MongooseModule.forRoot('mongodb+srv://dbUser:dbUser@cluster0.24fpq3x.mongodb.net/?retryWrites=true&w=majority'),
     IssuesModule,
     AuthModule,
     UsersModule,
