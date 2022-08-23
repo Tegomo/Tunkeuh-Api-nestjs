@@ -28,20 +28,20 @@ export class RolesService {
     if (!role) {
       throw new NotFoundException(`role with id ${id} not found`);
     }
-    return { role };
+    return  role ;
   }
 
   async update(id: string, updateRoleDto: UpdateRoleDto) {
-    const { role } = await this.findOne(id);
+    const  role  = await this.findOne(id);
     if (updateRoleDto.name) {
       role.name = updateRoleDto.name;
     }
     await role.save();
-    return { role };
+    return  role ;
   }
 
   async remove(id: string) {
-    const { role } = await this.findOne(id);
+    const  role  = await this.findOne(id);
     await role.remove();
   }
 }
