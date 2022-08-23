@@ -19,8 +19,7 @@ export class RolesService {
   }
 
   async findAll() {
-    const roles  = await this.RoleModel.find();
-    return { roles };
+    return await this.RoleModel.find();
   }
 
   async findOne(id: string) {
