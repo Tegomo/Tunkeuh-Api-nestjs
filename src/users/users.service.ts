@@ -99,7 +99,7 @@ export class UsersService {
     .populate('role'  , null, Role.name)
     .populate('entreprise', null, User.name);
 
-    return {users};
+    return users;
   }
 
   // entreprises
@@ -112,7 +112,7 @@ export class UsersService {
     .populate('staff'  , null, User.name)
     .where('isActive').equals(true);
 
-    return {entreprises};
+    return entreprises;
   }
   
 }

@@ -22,7 +22,7 @@ export class VehiclesCategoriesService {
     .populate('category', null, VehicleCategory.name)
     .sort({createdAt: 'desc'})
     .exec();
-    return { VehicleCategories };
+    return  VehicleCategories ;
   }
 
   findOne(id: number) {

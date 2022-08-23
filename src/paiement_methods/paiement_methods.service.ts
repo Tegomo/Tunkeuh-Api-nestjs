@@ -18,7 +18,7 @@ export class PaiementMethodsService {
 
   async findAll() {
     const paiementMethods  = await this.PaiementMethod.find();
-    return { paiementMethods };
+    return  paiementMethods ;
   }
 
   findOne(id: number) {

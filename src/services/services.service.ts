@@ -19,7 +19,7 @@ export class ServicesService {
 
   async findAll() {
     const Services  = await this.ServiceModel.find();
-    return { Services };
+    return  Services ;
   }
 
   findOne(id: number) {
