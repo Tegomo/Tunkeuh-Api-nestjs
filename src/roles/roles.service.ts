@@ -13,14 +13,14 @@ export class RolesService {
   ) {}
 
   async create(createRoleDto: CreateRoleDto) {
-    const Role = new this.RoleModel(createRoleDto);
-    await Role.save();
-    return { Role };
+    const role = new this.RoleModel(createRoleDto);
+    await role.save();
+    return { role };
   }
 
   async findAll() {
-    const Roles  = await this.RoleModel.find();
-    return { Roles };
+    const roles  = await this.RoleModel.find();
+    return { roles };
   }
 
   async findOne(id: string) {
