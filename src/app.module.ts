@@ -10,6 +10,7 @@ import { ServicesModule } from './services/services.module';
 import { VehiclesCategoriesModule } from './vehicles_categories/vehicles_categories.module';
 import { AdressesModule } from './adresses/adresses.module';
 import { PaiementMethodsModule } from './paiement_methods/paiement_methods.module';
+import { EntreprisesModule } from './entreprises/entreprises.module';
 
 @Module({
   imports: [
@@ -22,6 +23,7 @@ import { PaiementMethodsModule } from './paiement_methods/paiement_methods.modul
     VehiclesCategoriesModule,
     AdressesModule,
     PaiementMethodsModule,
+    EntreprisesModule,
     
   ],
   controllers: [AppController],

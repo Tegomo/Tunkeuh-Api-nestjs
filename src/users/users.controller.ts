@@ -48,11 +48,5 @@ export class UsersController {
     return this.usersService.deleteAccount(user);
   }
 
-  // entreprises
-  @Get('entreprises')
-  findEntreprises() {
-    return this.usersService.findEntreprises();
-  }
-
 
 }

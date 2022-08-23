@@ -102,17 +102,5 @@ export class UsersService {
     return users;
   }
 
-  // entreprises
 
-  async findEntreprises() {
-    const entreprises = await this.userModel
-    .find({ role: '62ca9ec9738ee38481256ddd' })
-    .populate('role'  , null, Role.name)
-    .populate('adresses'  , null, Adress.name)
-    .populate('staff'  , null, User.name)
-    .where('isActive').equals(true);
-
-    return entreprises;
-  }
-  
 }
