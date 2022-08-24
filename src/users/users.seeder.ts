@@ -64,7 +64,7 @@ export class UsersSeeder implements Seeder {
         { 
           _id: "62ca9ec9738ee38481256ddb",
           profile_url: "https://i.pravatar.cc/300",
-          name: "Chauffeur",
+          name: "Livreur",
           email: "chauffeur@gmail.com",
           password: "12345678",
           phone: "6868686868",

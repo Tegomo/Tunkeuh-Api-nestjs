@@ -18,7 +18,7 @@ export class RolesSeeder implements Seeder {
         },
         { 
           _id: "62ca9ec9738ee38481256ddb",
-          name: "chauffeur"
+          name: "Livreur"
          },
         {
           _id: "62ca9ec9738ee38481256ddc",
