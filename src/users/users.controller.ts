@@ -35,7 +35,7 @@ export class UsersController {
   // drivers
   @Get('drivers')
   findDrivers() {
-    return this.usersService.findDrivers();
+    return this.usersService.findLivreurs();
   }
 
   @Post('sign-up')

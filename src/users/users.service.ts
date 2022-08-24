@@ -113,7 +113,7 @@ export class UsersService {
     return clients;
   }
 
-  async findDrivers() {
+  async findLivreurs() {
     const clients = await this.userModel
     .find({ role: '62ca9ec9738ee38481256ddb' })
     .populate('role'  , null, Role.name)
