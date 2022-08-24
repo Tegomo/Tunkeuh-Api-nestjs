@@ -102,5 +102,27 @@ export class UsersService {
     return users;
   }
 
+  async findClients() {
+    const clients = await this.userModel
+    .find({ role: '62ca9ec9738ee38481256ddc' })
+    .populate('role'  , null, Role.name)
+    .populate('adresses'  , null, Adress.name)
+    .populate('staff'  , null, User.name)
+    .where('isActive').equals(true);
+
+    return clients;
+  }
+
+  async findDrivers() {
+    const clients = await this.userModel
+    .find({ role: '62ca9ec9738ee38481256ddb' })
+    .populate('role'  , null, Role.name)
+    .populate('adresses'  , null, Adress.name)
+    .populate('staff'  , null, User.name)
+    .where('isActive').equals(true);
+
+    return clients;
+  }
+
 
 }

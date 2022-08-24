@@ -26,6 +26,18 @@ export class UsersController {
     return this.usersService.findUsers();
   }
 
+  // clients
+  @Get('clients')
+  findClients() {
+    return this.usersService.findClients();
+  }
+
+  // drivers
+  @Get('drivers')
+  findDrivers() {
+    return this.usersService.findDrivers();
+  }
+
   @Post('sign-up')
   signUp(@Body(ValidationPipe) createUserDto: CreateUserDto, createRoleDto: CreateRoleDto) {
     return this.usersService.signUp(createUserDto, createRoleDto);
