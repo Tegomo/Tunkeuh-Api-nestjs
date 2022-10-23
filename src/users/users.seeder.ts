@@ -1,6 +1,7 @@
 import { Injectable } from "@nestjs/common";
 import { InjectModel } from "@nestjs/mongoose";
 import { Model } from "mongoose";
+import * as bcrypt from 'bcrypt';
 import { DataFactory, Seeder } from "nestjs-seeder";
 import { User } from "./user.schema";
 
@@ -9,6 +10,7 @@ export class UsersSeeder implements Seeder {
   constructor(@InjectModel(User.name) private readonly user: Model<User>) {}
 
   async seed(): Promise<any> {
+    const password = await bcrypt.hash("12345678", 10);
     // Generate users.
     const users = [
         { 
@@ -16,7 +18,7 @@ export class UsersSeeder implements Seeder {
           profile_url: "https://i.pravatar.cc/300",
           name: "Admin",
           email: "tegomovarmand@gmail.com",
-          password: "12345678",
+          password: password,
           phone: "6868686868",
           isActive: true,
           isSuperAdmin: true,
@@ -28,7 +30,7 @@ export class UsersSeeder implements Seeder {
           name: "Client",
           profile_url: "https://i.pravatar.cc/300",
           email: "client@gmail.com",
-          password: "12345678",
+          password: password,
           phone: "6868686868",
           isActive: true,
           isSuperAdmin: false,
@@ -40,7 +42,7 @@ export class UsersSeeder implements Seeder {
           profile_url: "https://i.pravatar.cc/300",
           name: "Entreprise 1",
           email: "entreprise@gmail.com",
-          password: "12345678",
+          password: password,
           phone: "6868686868",
           isActive: true,
           isSuperAdmin: false,
@@ -53,7 +55,7 @@ export class UsersSeeder implements Seeder {
           profile_url: "https://i.pravatar.cc/300",
           name: "Entreprise 2",
           email: "entreprise2@gmail.com",
-          password: "12345678",
+          password: password,
           phone: "6868686868",
           isActive: true,
           isSuperAdmin: false,
@@ -66,7 +68,7 @@ export class UsersSeeder implements Seeder {
           profile_url: "https://i.pravatar.cc/300",
           name: "Livreur",
           email: "chauffeur@gmail.com",
-          password: "12345678",
+          password: password,
           phone: "6868686868",
           isActive: true,
           isSuperAdmin: false,
@@ -79,7 +81,7 @@ export class UsersSeeder implements Seeder {
           profile_url: "https://i.pravatar.cc/300",
           name: "Gestionnaire",
           email: "gestionnaire@gmail.com",
-          password: "12345678",
+          password: password,
           phone: "6868686868",
           isActive: true,
           isSuperAdmin: false,
