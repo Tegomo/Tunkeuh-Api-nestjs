@@ -79,10 +79,16 @@ export class UsersService {
     };
   }
 
-  getProfile(user: UserDocument) {
+  async getProfile(user: UserDocument) {
     user.password = undefined;
+    const profile = await this.userModel
+    .find({ _id: user._id })
+    .populate('role'  , null, Role.name)
+    .populate('adresses'  , null, Adress.name)
+    .populate('entreprise'  , null, User.name)
+    .where('isActive').equals(true);
 
-    return { profile: user };
+    return { profile: profile };
   }
 
   async deleteAccount(user: UserDocument) {
