@@ -1,4 +1,5 @@
 import { Injectable } from '@nestjs/common';
+import { JwtService } from '@nestjs/jwt';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { CarCategorie, CarCategorieDocument } from './car_categorie.schema';
@@ -9,22 +10,22 @@ import { UpdateCarCategoryDto } from './dto/update-car_category.dto';
 export class CarCategoriesService {
 
   constructor(
-    @InjectModel(CarCategorie.name) private carCategorie: Model<CarCategorieDocument>
+    @InjectModel(CarCategorie.name) private carCategorieModel: Model<CarCategorieDocument>
   ) {}
 
 
-  async create(createCarCategoryDto: CreateCarCategoryDto) {
-    const carCategories = await this.carCategorie
+  create(createCarCategoryDto: CreateCarCategoryDto) {
+    return 'This action adds a new carCategory';
+  }
+
+  async findAll() {
+    const carCategories = await this.carCategorieModel
     .find()
     .populate('carsubcategories'  , null, CarCategorie.name)
     .populate('parentcategory'  , null, CarCategorie.name)
     .where('published').equals(true);
 
     return carCategories;
-  }
-
-  findAll() {
-    return `This action returns all carCategories`;
   }
 
   findOne(id: number) {
