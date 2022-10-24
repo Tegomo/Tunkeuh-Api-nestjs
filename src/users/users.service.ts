@@ -81,6 +81,7 @@ export class UsersService {
 
   async getProfile(user: UserDocument) {
     user.password = undefined;
+
     const profile = await this.userModel
     .find({ _id: user._id })
     .populate('role'  , null, Role.name)
@@ -88,7 +89,7 @@ export class UsersService {
     .populate('entreprise'  , null, User.name)
     .where('isActive').equals(true);
 
-    return { profile: profile };
+    return  profile ;
   }
 
   async deleteAccount(user: UserDocument) {
