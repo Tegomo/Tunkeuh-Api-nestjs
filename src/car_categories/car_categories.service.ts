@@ -19,10 +19,7 @@ export class CarCategoriesService {
 
   async findAll() {
     const carCategories = await this.carCategorieModel
-    .find()
-    .populate('carsubcategories'  , null, CarCategorie.name)
-    .populate('parentcategory'  , null, CarCategorie.name)
-    .where('published').equals(true);
+    .find();
 
     return carCategories;
   }
