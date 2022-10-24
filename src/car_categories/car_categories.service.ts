@@ -18,7 +18,10 @@ export class CarCategoriesService {
   }
 
   async findAll() {
-    const carCategories = await this.carCategorieModel.find();
+    const carCategories = await this.carCategorieModel
+    .find()
+    .populate('parentcategory'  , null, CarCategorie.name)
+    .populate('carsubcategories'  , null, CarCategorie.name);
     return carCategories;
   }
 
