@@ -1,5 +1,4 @@
 import { Injectable } from '@nestjs/common';
-import { JwtService } from '@nestjs/jwt';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { CarCategorie, CarCategorieDocument } from './car_categorie.schema';
@@ -10,7 +9,7 @@ import { UpdateCarCategoryDto } from './dto/update-car_category.dto';
 export class CarCategoriesService {
 
   constructor(
-    @InjectModel(CarCategorie.name) private carCategorieModel: Model<CarCategorieDocument>
+    @InjectModel(CarCategorie.name) private carCategorieModel: Model<CarCategorieDocument>,
   ) {}
 
 
