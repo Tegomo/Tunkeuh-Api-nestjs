@@ -4,14 +4,14 @@ import { Role, RoleSchema } from "./roles/role.schema";
 import { RolesSeeder } from "./roles/roles.seeder";
 import { ServicesSeeder } from "./services/services.seeder";
 import { Service, ServiceSchema } from "./services/service.schema";
-import { VehicleCategory, VehicleCategorySchema } from "./vehicles_categories/vehicles_category.schema";
-import { VehicleCategoriesSeeder } from "./vehicles_categories/vehicles_categories.seeder";
 import { PaiementMethodsSeeder } from "./paiement_methods/paiement_methods.seeder";
 import { PaiementMethod, PaiementMethodSchema } from "./paiement_methods/paiement_method.schema";
 import { AdressesSeeder } from "./adresses/adress.seeder";
 import { Adress, AdressSchema } from "./adresses/adress.schema";
 import { User, UserSchema } from "./users/user.schema";
 import { UsersSeeder } from "./users/users.seeder";
+import { CarCategorie, CarCategorieSchema } from "./car_categories/car_categorie.schema";
+import { CarCategoriesSeeder } from "./car_categories/car_categories.seeder";
 
 seeder({
   imports: [
@@ -19,10 +19,10 @@ seeder({
     MongooseModule.forFeature([
       { name: Role.name, schema: RoleSchema },
       { name: Service.name, schema: ServiceSchema },
-      { name: VehicleCategory.name, schema: VehicleCategorySchema },
       { name: PaiementMethod.name, schema: PaiementMethodSchema },
       { name: User.name, schema: UserSchema },
-      { name: Adress.name, schema: AdressSchema }
+      { name: Adress.name, schema: AdressSchema },
+      { name: CarCategorie.name, schema: CarCategorieSchema }
     ]),
   ],
-}).run([RolesSeeder, ServicesSeeder, VehicleCategoriesSeeder,PaiementMethodsSeeder, AdressesSeeder, UsersSeeder]);
+}).run([RolesSeeder, ServicesSeeder,PaiementMethodsSeeder, AdressesSeeder, UsersSeeder,CarCategoriesSeeder]);

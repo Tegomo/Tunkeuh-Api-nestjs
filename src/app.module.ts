@@ -7,10 +7,11 @@ import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
 import { RolesModule } from './roles/roles.module';
 import { ServicesModule } from './services/services.module';
-import { VehiclesCategoriesModule } from './vehicles_categories/vehicles_categories.module';
 import { AdressesModule } from './adresses/adresses.module';
 import { PaiementMethodsModule } from './paiement_methods/paiement_methods.module';
 import { EntreprisesModule } from './entreprises/entreprises.module';
+import { CarsModule } from './cars/cars.module';
+import { CarCategoriesModule } from './car_categories/car_categories.module';
 
 @Module({
   imports: [
@@ -20,10 +21,11 @@ import { EntreprisesModule } from './entreprises/entreprises.module';
     UsersModule,
     RolesModule,
     ServicesModule,
-    VehiclesCategoriesModule,
     AdressesModule,
     PaiementMethodsModule,
     EntreprisesModule,
+    CarsModule,
+    CarCategoriesModule,
     
   ],
   controllers: [AppController],
