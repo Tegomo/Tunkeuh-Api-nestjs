@@ -15,7 +15,7 @@ export class CarCategoriesService {
 
   async create(createCarCategoryDto: CreateCarCategoryDto) {
     const carCategories = await this.carCategorie
-    .find({ role: '62ca9ec9738ee38481256ddd' })
+    .find()
     .populate('carsubcategories'  , null, CarCategorie.name)
     .populate('parentcategory'  , null, CarCategorie.name)
     .where('published').equals(true);
