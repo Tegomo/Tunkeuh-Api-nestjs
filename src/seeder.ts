@@ -15,7 +15,7 @@ import { CarCategoriesSeeder } from "./car_categories/car_categories.seeder";
 
 seeder({
   imports: [
-    MongooseModule.forRoot("mongodb+srv://dbUser:dbUser@cluster0.24fpq3x.mongodb.net/?retryWrites=true&w=majority"),
+    MongooseModule.forRoot("mongodb+srv://TESTMongo:TESTMongo@cluster0.24fpq3x.mongodb.net/?retryWrites=true&w=majority"),
     MongooseModule.forFeature([
       { name: Role.name, schema: RoleSchema },
       { name: Service.name, schema: ServiceSchema },
