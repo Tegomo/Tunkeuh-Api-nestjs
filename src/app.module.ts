@@ -12,6 +12,7 @@ import { PaiementMethodsModule } from './paiement_methods/paiement_methods.modul
 import { EntreprisesModule } from './entreprises/entreprises.module';
 import { CarsModule } from './cars/cars.module';
 import { CarCategoriesModule } from './car_categories/car_categories.module';
+import { CarTypesModule } from './car_types/car_types.module';
 
 @Module({
   imports: [
@@ -26,6 +27,7 @@ import { CarCategoriesModule } from './car_categories/car_categories.module';
     EntreprisesModule,
     CarsModule,
     CarCategoriesModule,
+    CarTypesModule,
     
   ],
   controllers: [AppController],
