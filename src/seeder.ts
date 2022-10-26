@@ -14,6 +14,8 @@ import { CarCategorie, CarCategorieSchema } from "./car_categories/car_categorie
 import { CarCategoriesSeeder } from "./car_categories/car_categories.seeder";
 import { CarType, CarTypeSchema } from "./car_types/car_type.schema";
 import { CarTypesSeeder } from "./car_types/car_types.seeder";
+import { CarGenre, CarGenreSchema } from "./car_genres/car_genre.schema";
+import { CarGenresSeeder } from "./car_genres/car_genres.seeder";
 
 seeder({
   imports: [
@@ -25,7 +27,8 @@ seeder({
       { name: User.name, schema: UserSchema },
       { name: Adress.name, schema: AdressSchema },
       { name: CarCategorie.name, schema: CarCategorieSchema },
-      { name: CarType.name, schema: CarTypeSchema }
+      { name: CarType.name, schema: CarTypeSchema },
+      { name: CarGenre.name, schema: CarGenreSchema }
     ]),
   ],
 }).run([RolesSeeder,
@@ -34,4 +37,5 @@ seeder({
     AdressesSeeder, 
     UsersSeeder,
     CarCategoriesSeeder,
+    CarGenresSeeder,
     CarTypesSeeder]);

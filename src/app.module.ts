@@ -13,6 +13,7 @@ import { EntreprisesModule } from './entreprises/entreprises.module';
 import { CarsModule } from './cars/cars.module';
 import { CarCategoriesModule } from './car_categories/car_categories.module';
 import { CarTypesModule } from './car_types/car_types.module';
+import { CarGenresModule } from './car_genres/car_genres.module';
 
 @Module({
   imports: [
@@ -28,6 +29,7 @@ import { CarTypesModule } from './car_types/car_types.module';
     CarsModule,
     CarCategoriesModule,
     CarTypesModule,
+    CarGenresModule,
     
   ],
   controllers: [AppController],

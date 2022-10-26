@@ -34,13 +34,19 @@ export class CreateCarDto {
     kilometrage: string;
     
     @IsString()
+    structure: string;
+    
+    @IsString()
+    driver: string;
+
+    @IsString()
     nbrPlaces: string;
     
     @IsString()
     nbrPortes: string;
     
     @IsString()
-    image: any ;
+    images: any ;
     
     @Prop({ required: true, default: true })
     published!: boolean;
