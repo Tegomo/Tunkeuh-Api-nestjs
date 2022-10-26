@@ -79,4 +79,4 @@ export class Car {
 
 }
 
-export const  CarCategorieSchema = SchemaFactory.createForClass(Car);
+export const  CarSchema = SchemaFactory.createForClass(Car);
