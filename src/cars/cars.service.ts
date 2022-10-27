@@ -20,8 +20,14 @@ export class CarsService {
   }
 
   async findAll() {
+    const cars = await this.carModel
+    .find()
+    .populate('carType'  , null, CarType.name)
+    .populate('carGenre'  , null, CarGenre.name)
+    .populate('structure'  , null, User.name)
+    .populate('driver'  , null, User.name);
 
-    return `This`;
+    return cars;
   }
 
   findOne(id: number) {
