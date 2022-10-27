@@ -51,6 +51,7 @@ export class CarsSeeder implements Seeder {
       },
   ];
 
+  
     // Insert into the database.
     return this.car.insertMany(cars);
   }
