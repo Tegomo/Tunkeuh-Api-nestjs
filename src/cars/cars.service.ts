@@ -20,10 +20,8 @@ export class CarsService {
   }
 
   async findAll() {
-    const cars = await this.carModel
-    .find();
 
-    return cars;
+    return `This`;
   }
 
   findOne(id: number) {
