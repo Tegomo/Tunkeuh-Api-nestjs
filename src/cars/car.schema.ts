@@ -62,7 +62,7 @@ export class Car {
   nbrPortes: string;
 
   @Prop({ required: false, default: [] })
-  images: any;
+  images: string;
 
   @Prop({ type: mongoose.Schema.Types.ObjectId, carCategorie: CarCategorie.name, required: false, default: null })
   @Type(() => CarCategorie)

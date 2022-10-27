@@ -1,5 +1,6 @@
 import { Prop } from "@nestjs/mongoose";
 import { IsString } from "class-validator";
+import { Factory } from "nestjs-seeder";
 
 export class CreateCarDto {
 
@@ -45,8 +46,9 @@ export class CreateCarDto {
     @IsString()
     nbrPortes: string;
     
+    @Factory(faker => faker.images.cats())
     @IsString()
-    images: any ;
+    images: string ;
     
     @Prop({ required: true, default: true })
     published!: boolean;
