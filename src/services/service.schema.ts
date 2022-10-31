@@ -1,4 +1,6 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
+import { Type } from 'class-transformer';
+import mongoose from 'mongoose';
 import { Document } from 'mongoose';
 import { Factory } from "nestjs-seeder";
 
@@ -12,8 +14,16 @@ export class Service {
   name: string;
 
   @Factory(faker => faker.image.cats())
-  @Prop()
+  @Prop({ required: false, default: null })
   image: string;
+
+  @Prop({ type: mongoose.Schema.Types.ObjectId, parentService: Service.name, required: false, default: null })
+  @Type(() => Service)
+  parentService: Service;
+
+  @Prop([{ type: mongoose.Schema.Types.ObjectId, carsubcategories: Service.name, required: false, default: null }])
+  @Type(() => Service)
+  subServices: Service;
 
   @Prop({ required: true, default: true })
   published!: boolean;

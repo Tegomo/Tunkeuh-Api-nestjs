@@ -5,6 +5,18 @@ export class CreateServiceDto {
     @IsString()
     name: string;
 
+    @IsString()
+    @Prop({ required: false, default: null })
+    image: string;
+
+    @IsString()
+    @Prop({ required: false, default: null })
+    parentService: string;
+
+    @IsString()
+    @Prop({ required: false, default: null })
+    subServices: string;
+
     @Prop({ required: true, default: true })
     published!: boolean;
   
